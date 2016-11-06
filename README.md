@@ -41,7 +41,7 @@ Class Priority Queue {
 	public void enqueueSorted(T[] elements)
 	public void sortQueue()
 }
-
+```
 
 ### Credits
 Professor Mark Corner - 187 Honors Colloquium 2016
