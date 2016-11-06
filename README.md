@@ -42,6 +42,7 @@ class Priority Queue {
 	public String firstInLine() 
 	public void enqueueSorted(T[] elements)
 	public void sortQueue()
+	public void pigeonSort()
 }
 ```
 
