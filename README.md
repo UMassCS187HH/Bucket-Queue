@@ -44,6 +44,7 @@ class Priority Queue {
 ```
 
 ### Credits
-Professor Mark Corner - 187 Honors Colloquium 2016 \n
+Professor Mark Corner - 187 Honors Colloquium 2016
+
 Author: Jagath Jai Kumar, November 2016 - jagathjk.me
 
