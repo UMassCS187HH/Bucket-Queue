@@ -30,7 +30,7 @@ In the support folder you will find a driver class and a class called patient re
 
 ### Methods to Implement
 
-'''java
+```java
 Class Bucket {...}
 Class Priority Queue {
   public boolean isEmpty() {
