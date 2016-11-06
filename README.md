@@ -31,9 +31,9 @@ In the support folder you will find a driver class and a class called patient re
 ### Methods to Implement
 
 ```java
-Class Bucket {...}
-Class Priority Queue {
-  public boolean isEmpty() {
+class Bucket {...}
+class Priority Queue {
+  	public boolean isEmpty() {
 	public int size() {
 	public void enqueue(T[] elements) 
 	public void dequeue() 
@@ -44,6 +44,6 @@ Class Priority Queue {
 ```
 
 ### Credits
-Professor Mark Corner - 187 Honors Colloquium 2016
+Professor Mark Corner - 187 Honors Colloquium 2016 \n
 Author: Jagath Jai Kumar, November 2016 - jagathjk.me
 
