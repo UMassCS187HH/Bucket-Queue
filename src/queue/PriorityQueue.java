@@ -53,5 +53,8 @@ public class PriorityQueue<T> {
 	public void sortQueue() {
 		
 	}
+	public void pigeonSort() {
+		
+	}
 	
 }

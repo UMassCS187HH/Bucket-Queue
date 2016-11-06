@@ -19,6 +19,9 @@ public class Bucket<T> {
 	public T[] getData() {
 		return data;
 	}
+	public int getDataSize() {
+		return data.length;
+	}
 	public void setData(T[] data) {
 		this.data = data;
 	}
