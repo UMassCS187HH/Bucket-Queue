@@ -23,10 +23,6 @@ Next, you need to design a priority queue with the methods <b>enqueue</b>, <b>de
 
 You should add methods to insert a bucket into its sorted position in the priority queue, and you should also have a method to sort the queue by priority after all the methods have been added. None of the Test cases will require the size of the queue to be greater than 100 elements.
 
-#### Problem 4 - Implement a driver for patient data
-
-In the support folder you will find a driver class and a class called patient record. Using the patient record class and the bucket queue, design a simulator for donor organs in a hospital. The driver has been started for you.
-
 
 <b> Test cases will be provided for the bucket and priority queue implementation </b>
 
