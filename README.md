@@ -13,7 +13,7 @@ In other words a bucket queue is a priority queue composed of containers of othe
 
 Your first task is to design a bucket such that it has a priority and a way to store several objects in it. For example, if I want one bucket to store the integers 1,2,3 with a priority of 1, I should be able to say 
 ```java
-Bucket b = new Bucket({1,2,3}, 1);
+Bucket b = new Bucket(data, 1);
 ```
 #### Problem 2 - Design a Priority Queue
 
