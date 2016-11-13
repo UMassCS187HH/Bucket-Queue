@@ -1,21 +1,25 @@
 package queue;
 
-import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 import driver.PatientOrgan;
 
 public class PriorityQueue {
 	
-	Bucket<PatientOrgan>[] BucketQueue;
-	int size, DEFCAP=100, frontIndex, rearIndex, nextPriority;
+	
+	List<Bucket<PatientOrgan>> BucketQueue;
+	int size;
 	
 	public PriorityQueue() {
-		BucketQueue = new Bucket[DEFCAP];
+		BucketQueue = new LinkedList<Bucket<PatientOrgan>>();
 		this.size = 0;
-		this.frontIndex = 0;
-		this.rearIndex = 0;
-		this.nextPriority = 0;
+	}
+	
+	public PatientOrgan get(int i){
+		return BucketQueue.get(i).getData();
 	}
 	
 	public boolean isEmpty() {
@@ -26,40 +30,42 @@ public class PriorityQueue {
         // TODO 4
         return size;
 	}
-	public void enqueue(Bucket b) throws Exception {
+	public void enqueue(Bucket<PatientOrgan> b) {
         // TODO 5
-		if (size >= DEFCAP)
-			throw new Exception();
-		BucketQueue[rearIndex] = b;
+		BucketQueue.add(b);
 		size++;
-		rearIndex=rearIndex+1%DEFCAP;
 	}
 	//dequeue by priority
 	public PatientOrgan dequeue() throws Exception {
         // TODO 5
-		Bucket<PatientOrgan>[] a = new Bucket[BucketQueue.length];
-		for (int i = frontIndex; i < rearIndex; ++i){
-			a[i] = BucketQueue[i];
-		}
-		sort(a);
-		PatientOrgan p = a[nextPriority].getData();
-		nextPriority++;
-		return p;
+		sort();
+		
+		return BucketQueue.remove(0).getData();
 	}
-	public void sort(Bucket[] bq){
-		Arrays.sort(bq);
+	public void sort(){
+		 Collections.sort(BucketQueue, new Comparator<Bucket<PatientOrgan>>() {
+	         @Override
+	         public int compare(Bucket<PatientOrgan> o1, Bucket<PatientOrgan> o2) {
+	             if (o1.getPriority()>o2.getPriority())
+	            	 return 1;
+	             else if (o1.getPriority()<o2.getPriority())
+	            	 return -1;
+	             else
+	            	 return 0;
+	         }
+	     });
 	}
 	
 	public String firstInLine() {
-		return BucketQueue[frontIndex].getData().toString();
+		return BucketQueue.get(0).getData().getName();
 	}
 	
 	
 	//Return the order of priorities
 	public int[] pigeonSort() {
-		int[] a = new int[BucketQueue.length];
-		for (int i = frontIndex; i < rearIndex; ++i){
-			a[i] = BucketQueue[i].getPriority();
+		int[] a = new int[BucketQueue.size()];
+		for (int i = 0; i < BucketQueue.size(); i++){
+			a[i] = BucketQueue.get(i).getPriority();
 		}
 		
 		
