@@ -1,28 +1,26 @@
 package queue;
 
-public class Bucket<T> {
+public class Bucket<T> implements Comparable<Bucket>{
 	
-	private T[] data;
+	private T data;
 	private int priority = -1;
 
 	public Bucket() {
 		this.data = null;
 	}
-	public Bucket(T[] data) {
+	public Bucket(T data) {
 		this.data = data;
 	}
-	public Bucket(T[] data, int priority) {
+	public Bucket(T data, int priority) {
 		this(data);
 		this.setPriority(priority);
 	}
 	
-	public T[] getData() {
+	public T getData() {
 		return data;
 	}
-	public int getDataSize() {
-		return data.length;
-	}
-	public void setData(T[] data) {
+
+	public void setData(T data) {
 		this.data = data;
 	}
 	public int getPriority() {
@@ -30,5 +28,15 @@ public class Bucket<T> {
 	}
 	public void setPriority(int priority) {
 		this.priority = priority;
+	}
+	@Override
+	public int compareTo(Bucket o) {
+		// TODO Auto-generated method stub
+		if (this.getPriority()>o.getPriority())
+			return 1;
+		else if (this.getPriority()<o.getPriority())
+			return -1;
+		else
+			return 0;
 	}
 }
