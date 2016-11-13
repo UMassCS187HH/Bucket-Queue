@@ -34,13 +34,13 @@ The pigeon sort method should an int array with the priority of every element in
 ```java
 class Bucket {...}
 class Priority Queue {
-  	public boolean isEmpty() {
-	public int size() {
+	public PatientOrgan get(int i)
+  	public boolean isEmpty()
+	public int size()
 	public void enqueue(Bucket b) 
 	public void dequeue() 
 	public String firstInLine() 
-	public void sort(Bucket[])
-	public void sortQueue()
+	public void sort()
 	public void pigeonSort()
 }
 ```
