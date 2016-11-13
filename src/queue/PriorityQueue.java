@@ -36,7 +36,7 @@ public class PriorityQueue {
 		size++;
 	}
 	//dequeue by priority
-	public PatientOrgan dequeue() throws Exception {
+	public PatientOrgan dequeue() {
         // TODO 5
 		sort();
 		

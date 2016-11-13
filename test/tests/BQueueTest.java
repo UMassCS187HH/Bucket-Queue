@@ -25,7 +25,7 @@ public class BQueueTest {
 			PriorityQueue();
 	
 	@Test
-	public void testEnqueue() throws Exception {
+	public void testEnqueue() {
 		Bucket<PatientOrgan> b1 = new Bucket<PatientOrgan>();
 		b1.setData(o1);
 		b1.setPriority(1);
@@ -35,7 +35,7 @@ public class BQueueTest {
 	}
 	
 	@Test
-	public void testDequeue() throws Exception {
+	public void testDequeue() {
 		Bucket<PatientOrgan> b1 = new Bucket<PatientOrgan>();
 		b1.setData(o1);
 		b1.setPriority(1);
